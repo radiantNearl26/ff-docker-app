@@ -1,5 +1,13 @@
 # First attempt at containerzation with Docker
 
+> [!IMPORTANT]
+> Available now on the Docker Hub.
+
+```bash
+docker pull radiantnearl26/ff-app:v1-ubuntu
+docker pull radiantnearl26/ff-app:v2-alpine
+```
+
 Running fastfetch with given configuation on a basic alpine distribution with the necessary dependencies installed.
 
 ## Steps to start the container
@@ -20,6 +28,18 @@ docker run --rm ff-alpine:abc
 
 ```bash
 docker run -it --rm ff-alpine:abc bash
+```
+
+4. Tag the image (optional)
+
+```bash
+docker tag ff-alpine:abc radiantnearl26/ff-app:v2-alpine
+```
+
+5. Push the image to Docker Hub (optional)
+
+```bash
+docker push radiantnearl26/ff-app:v2-alpine
 ```
 
 ## Self Notes
